@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+*,
+*::after,
+*::before{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'Overpass', sans-serif;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: hsl(216, 12%, 8%);
+}
+
+.rating-container, .thanks-container{
+    width: 27%;
+    padding: 25px;
+    border-radius: 20px;
+    background-color: hsl(213, 19%, 18%);
+}
+
+.thanks-container{
+    text-align: center;
+}
+
+.star-img{
+    padding: 15px;
+    border-radius: 100%;
+    margin-bottom: 15px;
+    background-color: hsla(216, 12%, 8%, 0.475);
+}
+
+.info-rating{
+    margin-bottom: 15px;
+}
+
+.info-rating h1{
+    color: #fff;
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.info-rating p{
+    color: hsl(216, 12%, 54%);
+    font-size: 14px;
+}
+
+.rating-selector{
+    display: flex;
+    justify-content: space-around;
+    margin: 25px 0;
+}
+
+.rating-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    z-index: 0;
+}
+
+.rating-item input{
+    appearance: none;
+}
+
+.rating-item input::before{
+    content: attr(value);
+    padding: 15px 20px;
+    background-color: hsla(216, 12%, 8%, 0.62);
+    color: hsl(216, 12%, 54%);
+    border-radius: 50%;
+    font-size: 15px;
+    font-weight: 700;
+    transition: .3s;
+}
+
+.rating-item input:hover::before{
+    background-color: hsl(25, 97%, 53%);
+    color: #fff;
+}
+
+.rating-item input:checked::before{
+    background-color: hsl(217, 12%, 63%);
+    color: #fff;
+}
+
+.btn-submit{
+    display: block;
+    cursor: pointer;
+    width: 100%;
+    margin: auto;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    text-transform: uppercase;
+    font-size: 15px;
+    background-color: hsl(25, 97%, 53%);
+    color: #fff;
+    transition: .3s;
+}
+
+.btn-submit:hover{
+    background-color: #fff;
+    color: hsl(25, 97%, 53%);
+}
+
+.thanks-container img{
+    margin: 20px 0;
+}
+
+.thanks-container p{
+    background-color: hsla(216, 12%, 8%, 0.538);
+    color: hsl(25, 97%, 53%);
+    padding: 10px 15px;
+    margin: 20px auto;
+    border-radius: 10px;
+    width: fit-content;
+}
+
+.thanks-info h1{
+    color: #fff;
+}
+
+.thanks-info p{
+    background: none;
+    color: hsl(216, 12%, 54%);
+}
+
+@media screen and (max-width: 376px) {
+    .rating-container, .thanks-container{
+        width: 90%;
+        text-align: center;
+    }
+}
